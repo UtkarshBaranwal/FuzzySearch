@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>
+        Test
+    </title>
+    <!-- jQuery !-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"> </script>
+    <!-- jQuery UI !-->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+</head>
+<body>
+    <div class="form-group bmd-form-group">
+      <label class="bmd-label-static"
+             for="company_autocomplete_input">Type some random words</label>
+      <input id="company_autocomplete_input" class="form-control"
+             placeholder="here...." style="width:500px">
+    </div>
+
+    <script>
+      $(function() {
+        $("#company_autocomplete_input").autocomplete({
+          source: "http://127.0.0.1:8000/sub_module/autocomplete/",
+          minLength: 1,
+        });
+      });
+    </script>
+</body>
+</html>
